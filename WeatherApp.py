@@ -14,7 +14,7 @@ canvas.pack()
 
 # Setup the frame and place it.
 frame = tk.Frame(root, bg = "blue")
-frame.place(relwidth = 1, relheight = 1)
+frame.place(relx = 0.1, rely = 0.1, relwidth = 0.8, relheight = 0.8)
 
 # Add a button to the root and pack it
 button = tk.Button(root, text = "Test Button", bg = "gray", fg = "red")
