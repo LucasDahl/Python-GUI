@@ -1,9 +1,13 @@
 # import libraries
 import tkinter as tk
 
+# Properties ===========================================================
+
 # Set the height and width
 canvasHeight = 700
 canvasWidth = 800
+
+# End Properties =======================================================
 
 # Setup the root
 root = tk.Tk()
@@ -16,6 +20,8 @@ canvas.pack()
 frame = tk.Frame(root, bg = "blue")
 frame.place(relx = 0.1, rely = 0.1, relwidth = 0.8, relheight = 0.8)
 
+# UI Elements =========================================================
+
 # Add a button to the root and pack it
 button = tk.Button(frame, text = "Test Button", bg = "gray", fg = "red")
 button.pack(side = "left", fill = "both", expand = True)
@@ -27,6 +33,8 @@ label.pack(side = "left", fill = "both")
 # Add an entry bar
 entryBar = tk.Entry(frame, bg = "green")
 entryBar.pack(side = "left", fill = "both")
+
+# End UI Elements ======================================================
 
 # Run the mianloop
 root.mainloop()
