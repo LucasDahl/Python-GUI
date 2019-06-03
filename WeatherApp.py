@@ -18,15 +18,15 @@ frame.place(relx = 0.1, rely = 0.1, relwidth = 0.8, relheight = 0.8)
 
 # Add a button to the root and pack it
 button = tk.Button(frame, text = "Test Button", bg = "gray", fg = "red")
-button.pack()
+button.pack(side = "left", fill = "both", expand = True)
 
 # Add a label and pack it in
 label = tk.Label(frame, text = "Hello World!!", bg = "yellow")
-label.pack()
+label.pack(side = "left", fill = "both")
 
 # Add an entry bar
 entryBar = tk.Entry(frame, bg = "green")
-entryBar.pack()
+entryBar.pack(side = "left", fill = "both")
 
 # Run the mianloop
 root.mainloop()
