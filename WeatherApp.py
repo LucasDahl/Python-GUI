@@ -17,10 +17,21 @@ canvasWidth = 600
 
 # Method for getting the city
 def getWeather(city):
+
+    #API Key
     weatherKey = ""
+
+    # API URL
     url = "http://api.openweathermap.org/data/2.5/weather"
+
+    # Get a reference for the parameters
     params = {"APPID": weatherKey, "q": city, "units": "imperial"}
+
+    # Bundle up the url and param
     response = requests.get(url, params = params)
+
+    # Collect the json data
+    weather = response.json()
     print(response.json())
 
 
