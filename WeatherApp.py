@@ -8,9 +8,6 @@ import requests
 canvasHeight = 500
 canvasWidth = 600
 
-#API Key
-#
-
 # End Properties =======================================================
 
 # Methods===============================================================
@@ -48,8 +45,9 @@ def testFunction(entryBar):
 
 # End Methods===========================================================
 
-# Setup the root
+# Setup the root and set the title for the window
 root = tk.Tk()
+root.title("WeatherApp")
 
 # Setup the canvas
 canvas = tk.Canvas(root, height = canvasHeight, width = canvasWidth)
