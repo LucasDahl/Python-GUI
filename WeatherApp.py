@@ -15,7 +15,15 @@ canvasWidth = 600
 
 # Methods===============================================================
 
-# Method for getting the city
+# This will format the JSON data
+def formatResponse(weather):
+    name = weather["name"]
+    desc = weather["weather"][0]["description"]
+    temp = weather["main"]["temp"]
+
+    return str(name) + " " + str(desc) + " " + str(temp)
+
+# used in getting the city weather data
 def getWeather(city):
     #API Key
     weatherKey = ""
@@ -28,11 +36,11 @@ def getWeather(city):
     # Collect the json data
     weather = response.json()
 
+    # Set the labels text to the city the user searched for
+    label["text"] = formatResponse(weather)
+
     # Print the json thats returned
     #print(response.json())
-    print(weather["name"])
-    print(weather["weather"][0]["description"])
-    print(weather["main"]["temp"])
 
 
 def testFunction(entryBar):
