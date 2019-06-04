@@ -11,6 +11,10 @@ canvasWidth = 600
 
 # Setup the root
 root = tk.Tk()
+path = 
+backgroundImage = tk.PhotoImage(file = "landscape.png")
+backgroundLabel = tk.Label(root, image = backgroundImage)
+backgroundLabel.place(relwidth = 1, relheight = 1)
 
 # Setup the canvas
 canvas = tk.Canvas(root, height = canvasHeight, width = canvasWidth)
