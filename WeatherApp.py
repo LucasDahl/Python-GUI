@@ -4,8 +4,8 @@ import tkinter as tk
 # Properties ===========================================================
 
 # Set the height and width
-canvasHeight = 700
-canvasWidth = 800
+canvasHeight = 500
+canvasWidth = 600
 
 # End Properties =======================================================
 
@@ -17,7 +17,7 @@ canvas = tk.Canvas(root, height = canvasHeight, width = canvasWidth)
 canvas.pack()
 
 # Setup the frame and place it.
-frame = tk.Frame(root, bg = "blue")
+frame = tk.Frame(root, bg = "blue", bd = 5)
 frame.place(relx = 0.5, rely = 0.1, relwidth = 0.75, relheight = 0.1, anchor = "n")
 
 # UI Elements =========================================================
@@ -30,9 +30,13 @@ entryBar.place(relwidth = 0.65, relheight = 1)
 button = tk.Button(frame, text = "Test Button", font = 40)
 button.place(relx = 0.7, relheight = 1, relwidth = 0.3)
 
+# Setup the lower Frame
+lowerFrame = tk.Frame(root, bg = "blue", bd = 10)
+lowerFrame.place(relx = 0.5, rely = 0.25, relwidth = 0.75, relheight = 0.6, anchor = "n")
+
 # Add a label and pack it in
-#label = tk.Label(frame, text = "Hello World!", bg = "yellow")
-#label.place(relx = 0.3, rely = 0, relwidth = 0.45, relheight = 0.25)
+label = tk.Label(lowerFrame)
+label.place(relwidth = 1, relheight = 1)
 
 # End UI Elements ======================================================
 
