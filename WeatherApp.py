@@ -1,5 +1,6 @@
 # import libraries
 import tkinter as tk
+import requests
 
 # Properties ===========================================================
 
@@ -7,9 +8,21 @@ import tkinter as tk
 canvasHeight = 500
 canvasWidth = 600
 
+#API Key
+#
+
 # End Properties =======================================================
 
 # Methods===============================================================
+
+# Method for getting the city
+def getWeather(city):
+    weatherKey = ""
+    url = "http://api.openweathermap.org/data/2.5/weather"
+    params = {"APPID": weatherKey, "q": city, "units": "imperial"}
+    response = requests.get(url, params = params)
+    print(response.json())
+
 
 def testFunction(entryBar):
     print("You typed:", entryBar)
@@ -39,7 +52,7 @@ entryBar = tk.Entry(frame, font = 40)
 entryBar.place(relwidth = 0.65, relheight = 1)
 
 # Add a button to the root and pack it, use a Lambd method so it will be called everytime the button is pressed.
-button = tk.Button(frame, text = "Get Weather", font = 40, command = lambda: testFunction(entryBar.get()))
+button = tk.Button(frame, text = "Get Weather", font = 40, command = lambda: getWeather(entryBar.get()))
 button.place(relx = 0.7, relheight = 1, relwidth = 0.3)
 
 # Setup the lower Frame
