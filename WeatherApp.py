@@ -9,6 +9,13 @@ canvasWidth = 600
 
 # End Properties =======================================================
 
+# Methods===============================================================
+
+def testFunction(entryBar):
+    print("You typed:", entryBar)
+
+# End Methods===========================================================
+
 # Setup the root
 root = tk.Tk()
 
@@ -31,8 +38,8 @@ frame.place(relx = 0.5, rely = 0.1, relwidth = 0.75, relheight = 0.1, anchor = "
 entryBar = tk.Entry(frame, font = 40)
 entryBar.place(relwidth = 0.65, relheight = 1)
 
-# Add a button to the root and pack it
-button = tk.Button(frame, text = "Test Button", font = 40)
+# Add a button to the root and pack it, use a Lambd method so it will be called everytime the button is pressed.
+button = tk.Button(frame, text = "Get Weather", font = 40, command = lambda: testFunction(entryBar.get()))
 button.place(relx = 0.7, relheight = 1, relwidth = 0.3)
 
 # Setup the lower Frame
