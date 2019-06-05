@@ -14,11 +14,21 @@ canvasWidth = 600
 
 # This will format the JSON data
 def formatResponse(weather):
-    name = weather["name"]
-    desc = weather["weather"][0]["description"]
-    temp = weather["main"]["temp"]
 
-    return str(name) + " " + str(desc) + " " + str(temp)
+    #Try to get the desired JSON data
+    try:
+        name = weather["name"]
+        desc = weather["weather"][0]["description"]
+        temp = weather["main"]["temp"]
+
+        finalString = "City: %s \nConditions: %s \nTemperature (F): %s" % (name, desc, temp)
+
+    #Let the user know there was an error getting the data
+    except:
+        finalString = "There was a problem the requested info"
+    
+    # Return the string
+    return finalString
 
 # used in getting the city weather data
 def getWeather(city):
