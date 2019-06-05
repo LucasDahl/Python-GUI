@@ -1,5 +1,6 @@
 # import libraries
 import tkinter as tk
+from tkinter import font
 import requests
 
 # Properties ===========================================================
@@ -75,11 +76,11 @@ frame.place(relx = 0.5, rely = 0.1, relwidth = 0.75, relheight = 0.1, anchor = "
 # UI Elements =========================================================
 
 # Add an entry bar
-entryBar = tk.Entry(frame, font = 40)
+entryBar = tk.Entry(frame, font = ("Courier", 18))
 entryBar.place(relwidth = 0.65, relheight = 1)
 
 # Add a button to the root and pack it, use a Lambd method so it will be called everytime the button is pressed.
-button = tk.Button(frame, text = "Get Weather", font = 40, command = lambda: getWeather(entryBar.get()))
+button = tk.Button(frame, text = "Get Weather", font = ("Courier", 12), command = lambda: getWeather(entryBar.get()))
 button.place(relx = 0.7, relheight = 1, relwidth = 0.3)
 
 # Setup the lower Frame
@@ -87,7 +88,7 @@ lowerFrame = tk.Frame(root, bg = "blue", bd = 10)
 lowerFrame.place(relx = 0.5, rely = 0.25, relwidth = 0.75, relheight = 0.6, anchor = "n")
 
 # Add a label and pack it in
-label = tk.Label(lowerFrame)
+label = tk.Label(lowerFrame, font = ("Courier", 18))
 label.place(relwidth = 1, relheight = 1)
 
 # End UI Elements ======================================================
