@@ -88,7 +88,12 @@ lowerFrame = tk.Frame(root, bg = "blue", bd = 10)
 lowerFrame.place(relx = 0.5, rely = 0.25, relwidth = 0.75, relheight = 0.6, anchor = "n")
 
 # Add a label and pack it in
-label = tk.Label(lowerFrame, font = ("Courier", 18))
+# first argument is where the label is placed
+# Font = the font style and size
+# anochor = Which corner the label will be pinned
+# justify = Which side to align
+# bd = border(clear in this case)
+label = tk.Label(lowerFrame, font = ("Courier", 18), anchor = "nw", justify = "left", bd = 4)
 label.place(relwidth = 1, relheight = 1)
 
 # End UI Elements ======================================================
