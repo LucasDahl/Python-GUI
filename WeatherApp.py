@@ -21,7 +21,7 @@ def formatResponse(weather):
         desc = weather["weather"][0]["description"]
         temp = weather["main"]["temp"]
 
-        finalString = "City: %s \nConditions: %s \nTemperature (F): %s" % (name, desc, temp)
+        finalString = "City: %s \nConditions: %s \nTemperature (°F): %s" % (name, desc, temp)
 
     #Let the user know there was an error getting the data
     except:
