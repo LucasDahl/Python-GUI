@@ -59,7 +59,7 @@ def formatResponse(weather):
 # used in getting the city weather data
 def getWeather(city):
     #API Key
-    weatherKey = ""
+    weatherKey = "19e5e39161d357c8c1ec552acc9e16be"
     # API URL
     url = "http://api.openweathermap.org/data/2.5/weather"
     # Get a reference for the parameters
