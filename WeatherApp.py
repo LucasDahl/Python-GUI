@@ -1,7 +1,7 @@
 # import libraries
 import tkinter as tk
 from tkinter import font
-from random import *
+from random import randint
 import requests
 
 # Properties ===========================================================
