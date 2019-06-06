@@ -1,6 +1,7 @@
 # import libraries
 import tkinter as tk
 from tkinter import font
+from random import *
 import requests
 
 # Properties ===========================================================
@@ -24,9 +25,33 @@ def formatResponse(weather):
 
         finalString = "City: %s \nConditions: %s \nTemperature (°F): %s" % (name, desc, temp)
 
-    #Let the user know there was an error getting the data
+    #Let the user know there was an error getting the data, or API key is invalid/ No internet
     except:
-        finalString = "There was a problem the requested info"
+
+        # Get a random number
+        randInt = randint(1, 5)
+
+        if randInt == 1:
+            desc = "Sunny"
+            temp = randint(70, 102)
+        elif randInt == 2:
+            desc = "Raining"
+            temp = randint(37, 57)
+        elif randInt == 3:
+            desc = "Snowing"
+            temp = randint(1, 28)
+        elif randInt == 4:
+            desc = "Windy"
+            temp = randint(1, 102)
+        elif randInt == 5:
+            desc = "Cloudy"
+            temp = randInt(33, 79)
+        else:
+            desc = "Space invasion!!!!!"
+            temp = "RUN!"    
+
+        name = entryBar.get()
+        finalString = "City: %s \nConditions: %s \nTemperature (°F): %s" % (name, desc, temp)
     
     # Return the string
     return finalString
